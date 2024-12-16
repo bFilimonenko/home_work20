@@ -15,10 +15,11 @@ if (firstNum < secondNum) {
 
 const distanceF = parseInt(prompt("Enter your distance number in foot"));
 const distanceK = parseInt(prompt("Enter your distance number in kilometer"));
+const kilometerToFoot = distanceK * 305;
 
-if (distanceF > (distanceK * 305)) {
+if (distanceF > kilometerToFoot) {
   console.log("distance in kilometer is less that foot");
-} else if (distanceF === (distanceK * 305)) {
+} else if (distanceF === kilometerToFoot) {
   console.log("distance is the same");
 } else {
   console.log("distance in foot is less that kilometer");
@@ -76,23 +77,26 @@ const firstAndSecond = (threeDigitNum - lastDigit) / 10;
 const middleDigit = firstAndSecond % 10;
 const firstDigit = (firstAndSecond - middleDigit) / 10;
 
-console.log((firstDigit + middleDigit + lastDigit) % 2 === 0 ?
+//add const sum
+const sumOfDigits = firstDigit + middleDigit + lastDigit;
+
+console.log(sumOfDigits % 2 === 0 ?
   "The sum of digits is even" :
   "The sum of digits is odd");
-console.log((firstDigit + middleDigit + lastDigit) % 5 === 0 ?
+console.log(sumOfDigits % 5 === 0 ?
   "The sum of the digits is a multiple of 5" :
   "The sum of the digits is not a multiple of 5");
-console.log((firstDigit + middleDigit + lastDigit) > 100 ?
+console.log(sumOfDigits > 100 ?
   "The product of digits is greater than 100" :
   "The product of digits is less than 100");
 
-if ((firstDigit + middleDigit + lastDigit) % 2 === 0) {
+if (sumOfDigits % 2 === 0) {
   console.log("The sum of digits is even");
 }
-if ((firstDigit + middleDigit + lastDigit) % 5 === 0) {
+if (sumOfDigits % 5 === 0) {
   console.log("The sum of the digits is a multiple of 5");
 }
-if ((firstDigit + middleDigit + lastDigit) > 100) {
+if (sumOfDigits > 100) {
   console.log("The product of digits is greater than 100");
 }
 
